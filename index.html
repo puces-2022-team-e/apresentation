@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Team-E - Social Books</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						## PUCSP Engenharia de Software Team-E   Social Books
+						<a href="https://github.com/puces-2022-team-e" target="_blank">github</a>
+
+						---
+						## MockUp
+						<img src="https://raw.githubusercontent.com/puces-2022-team-e/social-book-architecture/main/resources/img/mockup_v1.0.0.png" alt="system_context" style="width:400px;height:440px;"/>
+						
+						---
+						## Our Stack 
+						<img src="img/mern.png" alt="mern" style="width:408px;height:190px;"/>
+
+						---
+						## C4 - Model
+						<section></section>
+						<section>
+							<p>#1 System Context</p>
+							<img src="img/system_context.png" alt="system context" style="width:400px;height:440px;"/>
+						</section>
+						<section>
+							<p>#2 Container Diagram</p>
+							<img src="img/container_diagram.png" alt="container diagram" style="width:400px;height:440px;"/>
+						</section>
+						<section>
+							<p>#3 Component Diagram</p>
+							<img src="img/component_diagram.png" alt="component diagram" style="width:400px;height:440px;"/>
+						</section>
+						<section>
+							<p>#4 Code 1 - Login</p>
+							<img src="img/login_with_google.png" alt="login with google" style="width:400px;height:440px;"/>
+						</section>
+						<section>
+							<p>#4 Code 2 - Express</p>
+							<img src="img/code_express.png" alt="express" style="width:400px;height:440px;"/>
+						</section>
+						<!-- <section></section> -->
+						---
+						## API
+						Book Resource representation
+
+						```json
+							{
+								"_id":string,
+								"bookInfo":{
+									"title":string,
+									"subtile":string,
+									"authors":[
+										string
+									],
+									"publisher":string,
+									"publishedDate":string,
+									"pageCount":integer,
+									"mainCategory":string,
+									"categories":[
+										string
+									],
+									"imageLinks": {
+										"thumbnail":string,
+										"mainImage":string,
+									}
+								},
+								"selfLink":string,
+								"averageRating":double,
+								"ratingCount":integer,
+								"userInfo":{
+									"userReview":string,
+									"userRate":double,
+									"isPurchased":boolean
+								}
+
+							}
+						```
+						---
+						## Discussion
+
+						```json
+							{
+								"_id":string,
+								"bookId":string,
+								"userId":string,
+								"created":datetime,
+								"updated":datetime,
+								"deleted":datetime,
+								"comments": [
+									{
+										"id":string,
+										"order":integer,
+										"userId":string,
+										"created":datetime,
+										"updated":datetime,
+										"deleted":datetime,
+										"text":string,
+									}
+								]
+								}
+							}
+						```
+						---
+						## Thanks
+					</textarea>
+				  </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
